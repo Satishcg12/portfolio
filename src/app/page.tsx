@@ -1,30 +1,29 @@
-import Button from "@/components/Button";
 import Image from "next/image";
+import ProfileImage from "@/images/profile.webp";
 
 export default function Home() {
   return (
     <main className="h-full flex flex-col flex-grow gap-y-10 justify-center items-center ">
       <div className="flex flex-col md:flex-row gap-y-12 gap-x-20 items-center text-center">
         <div className="image-blob">
-
-        <Image
-          src="/images/profile.jpg"
-          alt="Satish"
-          width={250}
-          height={250}
+          <Image
+            src={ProfileImage}
+            alt="Satish Chaudhary"
+            width={250}
+            height={250}
+            placeholder="blur"
           />
-          </div>
+        </div>
         <div className="flex flex-col gap-y-3 items-center md:items-start">
           <h1 className="text-4xl font-bold">Satish Chaudhary</h1>
-          <p
-            className=" text-gray-500 font-semibold 
-          "
-          >
-            Software Developer 
+          <p className=" text-gray-500 font-semibold dark:text-gray-300 text-lg">
+            Software Developer
           </p>
 
           <div className="flex gap-x-5 font-semibold">
-            <Button>Download CV</Button>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md">
+              Download CV
+            </button>
             <button className="border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md">
               Contact me
             </button>
@@ -34,7 +33,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/satish-chaudhary-65224b241/"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-600 font-semibold capitalize hover:text-blue-500 hover:underline"
+              className="text-gray-600 dark:text-gray-300 font-semibold  capitalize hover:text-blue-500 dark:hover:text-blue-500 "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +50,7 @@ export default function Home() {
               href="https://www.github.com/satishCG12"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-600 font-semibold capitalize hover:text-black hover:underline"
+              className="text-gray-600 dark:text-gray-300 font-semibold  capitalize hover:text-black dark:hover:text-white "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

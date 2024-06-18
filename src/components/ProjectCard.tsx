@@ -51,7 +51,8 @@ const ProjectCard = ({
   return (
     <div
       ref={container}
-      className="shadow-lg  border sticky h-[80vh] w-full  bg-neutral-200/70 backdrop-blur rounded-xl overflow-hidden flex flex-col gap-4 p-4"
+      className="shadow-lg  border dark:border-gray-700 sticky h-[80vh] w-full  bg-neutral-200/70 dark:bg-gray-800 
+       backdrop-blur rounded-xl overflow-hidden flex flex-col gap-4 p-4"
       style={{
         top: `${verticalMargin}vh`,
         height: ` ${100 - verticalMargin * 2}vh)`,
@@ -78,7 +79,7 @@ const ProjectCard = ({
         {techStack.map((tech) => (
             <li
               key={tech}
-              className="text-sm font-light bg-white p-2 rounded-lg"
+              className="text-sm font-light bg-white  p-2 rounded-lg dark:bg-gray-700"
             >
               {tech}
             </li>
@@ -93,7 +94,7 @@ const ProjectCard = ({
               href={demoUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-light bg-white p-2 rounded-lg"
+              className="text-sm font-light bg-white p-2 rounded-lg dark:bg-gray-700"
             >
               Demo
             </motion.a>
@@ -106,7 +107,7 @@ const ProjectCard = ({
               href={sourceUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-light bg-white p-2 rounded-lg"
+              className="text-sm font-light bg-white p-2 rounded-lg dark:bg-gray-700 ring ring-gray-300 dark:ring-blue-600"
             >
               Source
             </motion.a>

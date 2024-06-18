@@ -26,11 +26,11 @@ const Projects = async (props: Props) => {
 
   return (
     <main className="relative h-full px-4 snap-proximity">
-      <div className=" h-1/3 flex flex-col items-center justify-center gap-x-4">
-        <p className="text-gray-500 text-center">
+      <div className=" h-1/3 flex flex-col items-center text-center justify-center gap-x-4">
+        <p className="text-gray-500 dark:text-gray-400">
           <AnimatedText text="Browse_My_Recent" />
         </p>
-        <h1 className="relative text-4xl font-bold text-center space-x-0.5">
+        <h1 className="relative text-4xl font-bold  space-x-1">
           <AnimatedText text="Projects" />
         </h1>
       </div>
