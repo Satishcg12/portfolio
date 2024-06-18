@@ -2,14 +2,6 @@ import AnimatedText from "@/components/AnimatedText";
 import ProjectCard from "@/components/ProjectCard";
 
 type Props = {};
-// [
-//   {
-//     title: 'ZeroWaste: A record keeping app for waste management',
-//     imageUrl: '/images/project1.jpeg',
-//     techStack: [ 'Laravel', 'MySQL', 'TailwindCSS', 'Babel' ],
-//     sourceUrl: 'https://github.com/Satishcg12/waste_management/settings'
-//   }
-// ]
 type Project = {
   title: string;
   imageUrl: string;
@@ -19,10 +11,17 @@ type Project = {
 };
 
 const Projects = async (props: Props) => {
-  const data = await fetch(
-    `${process.env.NEXT_PUBLIC_CDN_URL}/projectList.json`
-  );
-  const project: Project[] = await data.json();
+  let project: Project[] | string = [];
+
+  try {
+    const data = await fetch(
+      `${process.env.NEXT_PUBLIC_CDN_URL}/projectList.json`
+    );
+    project = await data.json();
+  } catch (error) {
+    console.error("Failed to fetch projects:", error);
+    project = "Failed to fetch projects";
+  }
 
   return (
     <main className="relative h-full px-4 snap-proximity">
@@ -35,17 +34,21 @@ const Projects = async (props: Props) => {
         </h1>
       </div>
 
-      <div className="relative scroll-smooth">
-        {project.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            imageUrl={process.env.NEXT_PUBLIC_CDN_URL + project.imageUrl}
-            techStack={project.techStack}
-            demoUrl={project.demoUrl}
-            sourceUrl={project.sourceUrl}
-          />
-        ))}
+      <div className="relative scroll-smooth ">
+        {typeof project === "string" ? (
+          <div className="w-full text-center">{project}</div>
+        ) : (
+          project.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              imageUrl={process.env.NEXT_PUBLIC_CDN_URL + project.imageUrl}
+              techStack={project.techStack}
+              demoUrl={project.demoUrl}
+              sourceUrl={project.sourceUrl}
+            />
+          ))
+        )}
       </div>
     </main>
   );

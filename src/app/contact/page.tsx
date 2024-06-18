@@ -11,7 +11,7 @@ const Contact = (props: Props) => {
             <AnimatedText text="Get_In_Touch" />
           </p>
           <h1 className="text-4xl font-bold space-x-1">
-            <AnimatedText text="Contact Me" />
+            <AnimatedText text="Contact_Me" />
           </h1>
         </div>
         <div className="flex flex-col sm:flex-row gap-y-2 border-2 border-gray-500 rounded-3xl p-2">

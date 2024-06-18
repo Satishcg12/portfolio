@@ -67,7 +67,7 @@ const ProjectCard = ({
           alt={title}
           loading="lazy"
           fill
-          className="object-cover object-top hover:object-bottom transition-all hover:duration-[4s]"
+          className="object-cover object-top hover:object-bottom transition-all hover:duration-[5s]"
           sizes="90vw"
         />
       </div>
