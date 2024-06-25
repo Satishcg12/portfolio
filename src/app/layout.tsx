@@ -25,7 +25,6 @@ export default function RootLayout({
       <body
         className={`dark:bg-gray-800 dark:text-white font-mono animated-gradient  text-lg max-w-6xl mx-auto flex flex-col h-screen`}
       >
-        <Navbar />
 
         {children}
       </body>

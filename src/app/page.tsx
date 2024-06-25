@@ -21,9 +21,12 @@ export default function Home() {
           </p>
 
           <div className="flex gap-x-5 font-semibold">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md">
+            <a className="bg-blue-500 text-white px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md"
+              href="/cv.pdf"
+              download={true}
+            >
               Download CV
-            </button>
+            </a>
             <button className="border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md">
               Contact me
             </button>
