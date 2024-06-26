@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProfileImage from "@/images/profile.webp";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,9 +28,12 @@ export default function Home() {
             >
               Download CV
             </a>
-            <button className="border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md">
+            <Link 
+            href={"/contact"}
+             className="border-2 border-blue-500 text-blue-500 px-4 py-2 rounded-3xl hover:bg-blue-600 hover:text-white shadow-md"
+            >
               Contact me
-            </button>
+            </Link>
           </div>
           <div className="flex gap-3">
             <a
