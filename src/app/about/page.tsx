@@ -74,8 +74,8 @@ const About = (props: Props) => {
                 />
               </svg>
               <h2 className="text-xl font-bold text-black dark:text-white">Education</h2>
-              <p>1+ years</p>
-              <p>Web Developer</p>
+              <p>Bachelor of Computer Applications</p>
+              <p>(on going)</p>
             </div>
             <p className="text-center col-span-2 text-gray-700 dark:text-gray-300">
             I'm a web developer who is passionate about creating stunning, user-friendly websites. I love learning new technology and have a background in business. I have created e-commerce websites, Wordpress websites, and personal websites. To create my websites, I utilized React, Next.js, TailwindCSS, and MongoDB. My present objective is to evolve into a full stack developer.
